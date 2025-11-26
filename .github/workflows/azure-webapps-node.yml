@@ -1,1 +1,12 @@
-on:
+name: azure ci/cd pipeline
+on: 
+ push:
+  branches:
+    - main
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: checkout code
+     uses: actions/chackout@4
+
